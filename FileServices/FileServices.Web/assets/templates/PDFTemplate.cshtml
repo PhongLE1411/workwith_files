@@ -1,0 +1,46 @@
+﻿@model List<FileServices.Web.Models.Employee>
+
+<html>
+<head>
+    <style>
+        body {
+            font-family: "Arial";
+            font-size: 14px;
+        }
+
+        .car-name {
+            color: darkgray;
+        }
+
+        .car-max-speed {
+            color: tomato;
+        }
+
+        .car-registration {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    @foreach (var car in Model)
+    {
+        <div>
+            <span>Name:</span>
+            <span class="car-name">@car.Name</span>
+        </div>
+        <div>
+            <span>Last name:</span>
+            <span class="car-registration">@car.LastName</span>
+        </div>
+        <div>
+            <span>Age:</span>
+            <span class="car-max-speed">@car.Age</span>
+        </div>
+        <div>
+            <span> Gender:</span>
+            <span> @car.Gender</span>
+        </div>
+        <br />
+    }
+</body>
+</html>
